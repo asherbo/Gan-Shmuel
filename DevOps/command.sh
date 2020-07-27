@@ -1,6 +1,6 @@
 #!/bin/bash
 branchName="Devops"
-git branch $branchName
+git checkout $branchName
 git add .
 commit="automatic commit"
 if [ $1 ]; then commit=$1; fi

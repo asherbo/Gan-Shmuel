@@ -1,4 +1,4 @@
-git pull origin weigth
+git pull origin weight
 git add .
-git commit -m "commit name"
-git push origin weigth
+git commit -m "$1" || "autometic commit"
+git push origin weight

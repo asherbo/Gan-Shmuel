@@ -1,0 +1,25 @@
+version: '3.3'
+services:
+    # db:
+        # container_name: db
+        # image: postgres
+        # restart: always
+        # environment:
+            # POSTGRES_PASSWORD: 123456
+        # volumes: 
+            # - "./init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh"
+    flask-app:
+        container_name: app
+        build: .
+            # context: ./
+            # dockerfile: Dockerfile
+        ports:
+            - 8080:8080
+            # - "8080:8000"
+        volumes:
+            - app:/app
+            # - <path/to/your/certs>:/etc/ssl/private
+            # - ./project/static:/etc/nginx/
+        # environment:
+            # - NGINX_HOST=foobar.com
+            # - NGINX_PORT=80

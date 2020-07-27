@@ -1,6 +1,9 @@
+#!/bin/bash
 git add .
-git commit -m "$1 pull" || "autometic commit pull"
+commit="automatic commit"
+if [ $1 ]; then commit=$1; fi
+git commit -m "$commit pull"
 git pull origin weight
 git add .
-git commit -m "$1 push" || "autometic commit push"
+git commit -m "$commit push"
 git push origin weight

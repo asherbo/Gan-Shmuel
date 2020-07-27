@@ -11,6 +11,8 @@ from flask_sqlalchemy import SQLAlchemy
 # pip install Flask-SQLAlchemy (version 2.4.4)
 # pip install SQLAlchemy (version 1.3.18)
 
+# Tasks to complete for Monday:
+# VCS, CI Server, /health for all services
 
 app = Flask(__name__)
 health = HealthCheck(app, "/healthcheck")

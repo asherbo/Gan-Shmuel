@@ -15,9 +15,8 @@ services:
             # dockerfile: Dockerfile
         ports:
             - 8080:8080
-            # - "8080:8000"
         volumes:
-            - app:/app
+            - ./app:/app
             # - <path/to/your/certs>:/etc/ssl/private
             # - ./project/static:/etc/nginx/
         # environment:

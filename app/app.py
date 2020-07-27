@@ -7,9 +7,6 @@ def main():
     return "<h1>Test<h1>"
 
 
-
-
-
 @app.route("/niv")
 def nuv():
     return "<h1>.....<h1>"

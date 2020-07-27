@@ -1,4 +1,5 @@
 #! /bin/bash
+
 branchName="weight"
 git branch $branchName
 git add .

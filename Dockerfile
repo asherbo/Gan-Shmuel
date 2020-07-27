@@ -1,10 +1,9 @@
 FROM python:latest
-COPY app /app
 WORKDIR /app
+RUN  pip install flask
+ENTRYPOINT [ "python", "app.py" ] 
 
-RUN pip freeze > requirements.txt
+
+
+# RUN pip freeze > requirements.txt
 # RUN pip install -r requirements.txt
-# RUN ls -1
-# RUN pwd
-# ENTRYPOINT [ "" ]
-

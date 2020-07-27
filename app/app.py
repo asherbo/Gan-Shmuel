@@ -1,11 +1,13 @@
-<<<<<<< HEAD
-from flask import Flask,
-# from flask_restful import Resource, Api
-=======
 from flask import Flask ,jsonify
->>>>>>> a67146d2fc7e11943f7de2e9967bb21ad6345bf3
+from flask.ext.mysql import MySQL
+from healthcheck import HealthCheck, EnvironmentDump
+# from flask_sqlalchemy import SQLAlchemy
+# from sqlalchemy import MetaData
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+db = SQLAlchemy(app)
+
 @app.route("/")
 def main():
     return "<h1>Test<h1>"
@@ -22,4 +24,4 @@ def is_alive():
     return resp
     
 if  __name__ == "__main__" :
-    app.run(debug=True,host="0.0.0.0", port=8080)
+    app.run(debug=True,host="localhost", port=8089)

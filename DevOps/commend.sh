@@ -1,4 +1,11 @@
-git pull origin Devops
+#!/bin/bash
+branchName="Devops"
+git branch $branchName
 git add .
-git commit -m "$1" || "autometic commit"
-git push origin Devops
+commit="automatic commit"
+if [ $1 ]; then commit=$1; fi
+git commit -m "$commit pull"
+git pull origin $branchName
+git add .
+git commit -m "$commit push"
+git push origin $branchName
